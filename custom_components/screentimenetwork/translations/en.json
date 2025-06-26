@@ -2,15 +2,15 @@
     "config": {
         "step": {
             "user": {
-                "description": "If you need help with the configuration have a look here: https://github.com/ludeeus/integration_blueprint",
+                "description": "If you need help with the configuration have a look here: https://github.com/TimCinel/ha-screentimenetwork",
                 "data": {
-                    "username": "Username",
-                    "password": "Password"
+                    "username": "Username (handle)",
+                    "api_token": "API Key"
                 }
             }
         },
         "error": {
-            "auth": "Username/Password is wrong.",
+            "auth": "Invalid API key.",
             "connection": "Unable to connect to the server.",
             "unknown": "Unknown error occurred."
         },

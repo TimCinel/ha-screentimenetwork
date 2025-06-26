@@ -1,0 +1,13 @@
+{
+  "domain": "screentimenetwork",
+  "name": "The Screentime Network",
+  "codeowners": [
+    "@TimCinel"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/TimCinel/ha-screentimenetwork",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/TimCinel/ha-screentimenetwork/issues",
+  "version": "0.1.0"
+}

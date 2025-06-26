@@ -1,46 +1,54 @@
-# Notice
+# The Screentime Network Integration for Home Assistant
 
-The component and platforms in this repository are not meant to be used by a
-user, but as a "blueprint" that custom component developers can build
-upon, to make more awesome stuff.
+[![GitHub Release][releases-shield]][releases]
+[![GitHub Activity][commits-shield]][commits]
+[![License][license-shield]](LICENSE)
+[![hacs][hacsbadge]][hacs]
 
-HAVE FUN! 😎
+This integration provides a sensor for your screen time sourced from thescreentimenetwork.com.
 
-## Why?
+## Installation
 
-This is simple, by having custom_components look (README + structure) the same
-it is easier for developers to help each other and for users to start using them.
+### HACS (Recommended)
 
-If you are a developer and you want to add things to this "blueprint" that you think more
-developers will have use for, please open a PR to add it :)
+1. Ensure that [HACS](https://hacs.xyz/) is installed.
+2. Search for and install the "The Screentime Network" integration.
+3. Restart Home Assistant.
 
-## What?
+### Manual Installation
 
-This repository contains multiple files, here is a overview:
+1. Download the `custom_components/screentimenetwork` directory from the [latest release](https://github.com/TimCinel/ha-screentimenetwork/releases).
+2. Copy it into your `custom_components` directory.
+3. Restart Home Assistant.
 
-File | Purpose | Documentation
--- | -- | --
-`.devcontainer.json` | Used for development/testing with Visual Studio Code. | [Documentation](https://code.visualstudio.com/docs/remote/containers)
-`.github/ISSUE_TEMPLATE/*.yml` | Templates for the issue tracker | [Documentation](https://help.github.com/en/github/building-a-strong-community/configuring-issue-templates-for-your-repository)
-`custom_components/integration_blueprint/*` | Integration files, this is where everything happens. | [Documentation](https://developers.home-assistant.io/docs/creating_component_index)
-`CONTRIBUTING.md` | Guidelines on how to contribute. | [Documentation](https://help.github.com/en/github/building-a-strong-community/setting-guidelines-for-repository-contributors)
-`LICENSE` | The license file for the project. | [Documentation](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/licensing-a-repository)
-`README.md` | The file you are reading now, should contain info about the integration, installation and configuration instructions. | [Documentation](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax)
-`requirements.txt` | Python packages used for development/lint/testing this integration. | [Documentation](https://pip.pypa.io/en/stable/user_guide/#requirements-files)
+## Configuration
 
-## How?
+1. In the Home Assistant UI, go to **Configuration** > **Integrations**.
+2. Click the **+ ADD INTEGRATION** button.
+3. Search for "The Screentime Network".
+4. Enter your API key from thescreentimenetwork.com.
 
-1. Create a new repository in GitHub, using this repository as a template by clicking the "Use this template" button in the GitHub UI.
-1. Open your new repository in Visual Studio Code devcontainer (Preferably with the "`Dev Containers: Clone Repository in Named Container Volume...`" option).
-1. Rename all instances of the `integration_blueprint` to `custom_components/<your_integration_domain>` (e.g. `custom_components/awesome_integration`).
-1. Rename all instances of the `Integration Blueprint` to `<Your Integration Name>` (e.g. `Awesome Integration`).
-1. Run the `scripts/develop` to start HA and test out your new integration.
+## Features
 
-## Next steps
+- Provides a sensor showing your screen time data
+- Updates hourly from thescreentimenetwork.com
 
-These are some next steps you may want to look into:
-- Add tests to your integration, [`pytest-homeassistant-custom-component`](https://github.com/MatthewFlamm/pytest-homeassistant-custom-component) can help you get started.
-- Add brand images (logo/icon) to https://github.com/home-assistant/brands.
-- Create your first release.
-- Share your integration on the [Home Assistant Forum](https://community.home-assistant.io/).
-- Submit your integration to [HACS](https://hacs.xyz/docs/publish/start).
+## Support
+
+For issues, please visit the [issue tracker](https://github.com/TimCinel/ha-screentimenetwork/issues).
+
+## Contributing
+
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+[commits-shield]: https://img.shields.io/github/commit-activity/y/TimCinel/ha-screentimenetwork.svg?style=for-the-badge
+[commits]: https://github.com/TimCinel/ha-screentimenetwork/commits/main
+[hacs]: https://github.com/hacs/integration
+[hacsbadge]: https://img.shields.io/badge/HACS-Default-41BDF5.svg?style=for-the-badge
+[license-shield]: https://img.shields.io/github/license/TimCinel/ha-screentimenetwork.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/TimCinel/ha-screentimenetwork.svg?style=for-the-badge
+[releases]: https://github.com/TimCinel/ha-screentimenetwork/releases
