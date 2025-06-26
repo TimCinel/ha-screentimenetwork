@@ -2,7 +2,6 @@
 
 from unittest.mock import AsyncMock, patch
 
-import pytest
 from homeassistant import config_entries
 from homeassistant.const import CONF_API_TOKEN, CONF_USERNAME
 from homeassistant.core import HomeAssistant
@@ -27,8 +26,10 @@ async def test_form_user(hass: HomeAssistant):
     with patch(
         "custom_components.screentimenetwork.config_flow.STNApiClient",
     ) as mock_client:
-        mock_client.return_value.async_get_data = AsyncMock(return_value={"data": {"totalScreenTime": 123}})
-        
+        mock_client.return_value.async_get_data = AsyncMock(
+            return_value={"data": {"totalScreenTime": 123}}
+        )
+
         result2 = await hass.config_entries.flow.async_configure(
             result["flow_id"],
             {
@@ -58,7 +59,7 @@ async def test_form_invalid_auth(hass: HomeAssistant):
         mock_client.return_value.async_get_data = AsyncMock(
             side_effect=STNApiClientAuthenticationError("Invalid credentials")
         )
-        
+
         result2 = await hass.config_entries.flow.async_configure(
             result["flow_id"],
             {
@@ -83,7 +84,7 @@ async def test_form_cannot_connect(hass: HomeAssistant):
         mock_client.return_value.async_get_data = AsyncMock(
             side_effect=STNApiClientCommunicationError("Cannot connect")
         )
-        
+
         result2 = await hass.config_entries.flow.async_configure(
             result["flow_id"],
             {
@@ -108,7 +109,7 @@ async def test_form_unknown_error(hass: HomeAssistant):
         mock_client.return_value.async_get_data = AsyncMock(
             side_effect=STNApiClientError("Unknown error")
         )
-        
+
         result2 = await hass.config_entries.flow.async_configure(
             result["flow_id"],
             {
@@ -148,8 +149,10 @@ async def test_form_already_configured(hass: HomeAssistant):
     with patch(
         "custom_components.screentimenetwork.config_flow.STNApiClient",
     ) as mock_client:
-        mock_client.return_value.async_get_data = AsyncMock(return_value={"data": {"totalScreenTime": 123}})
-        
+        mock_client.return_value.async_get_data = AsyncMock(
+            return_value={"data": {"totalScreenTime": 123}}
+        )
+
         result2 = await hass.config_entries.flow.async_configure(
             result["flow_id"],
             {

@@ -8,7 +8,7 @@ import pytest
 @pytest.fixture(autouse=True)
 def auto_enable_custom_integrations(enable_custom_integrations):
     """Enable loading of custom integrations in all tests."""
-    yield
+    return
 
 
 @pytest.fixture
@@ -23,13 +23,7 @@ def mock_setup_entry():
 @pytest.fixture
 def mock_stn_api():
     """Mock STNApiClient."""
-    with patch(
-        "custom_components.screentimenetwork.api.STNApiClient"
-    ) as mock_client:
+    with patch("custom_components.screentimenetwork.api.STNApiClient") as mock_client:
         client = mock_client.return_value
-        client.async_get_data.return_value = {
-            "data": {
-                "totalScreenTime": 123.5
-            }
-        }
+        client.async_get_data.return_value = {"data": {"totalScreenTime": 123.5}}
         yield client
