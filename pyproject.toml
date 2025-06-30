@@ -1,0 +1,49 @@
+[tool.ruff]
+# The contents of this file are based on the Home Assistant Core project config:
+# https://github.com/home-assistant/core/blob/dev/pyproject.toml
+
+target-version = "py313"
+
+lint.select = [
+    "ALL",
+]
+
+lint.ignore = [
+    "ANN401",  # Dynamically typed expressions (typing.Any) are disallowed
+    "COM812",  # May cause conflicts with formatter https://docs.astral.sh/ruff/linter/#error-suppression
+    "D203",    # no-blank-line-before-class (incompatible with formatter)
+    "D212",    # multi-line-summary-first-line (incompatible with formatter)
+    "D213",    # Multi-line docstring summary should start at the second line
+    "FBT003",  # Boolean positional value in function call
+    "FIX002",  # Line contains TODO, consider resolving the issue
+    "ISC001",  # May cause conflicts with formatter https://docs.astral.sh/ruff/linter/#error-suppression
+    "PD011",   # Pandas - use .to_numpy instead of .values
+    "PLR0912", # Too many branches
+    "PLR0913", # Too many arguments in function definition
+    "PLR0915", # Too many statements
+    "S101",    # Use of `assert` detected
+    "S311",    # Standard pseudo-random generators are not suitable for cryptographic purposes
+    "TD002",   # Missing author in TODO
+    "TD003",   # Missing issue link on the line following this TODO
+    "TD004",   # Missing colon in TODO
+    "TRY003",  # Avoid specifying long messages outside the exception class
+]
+
+[tool.ruff.lint.per-file-ignores]
+# Allow for main entry & scripts to write to stdout
+"script/*" = ["T201"]
+
+# Ignore missing annotations for tests
+"tests/*" = ["ANN001", "ANN201", "ANN202", "ANN205", "ANN206"]
+
+[tool.ruff.lint.flake8-annotations]
+suppress-none-returning = true
+
+[tool.ruff.lint.flake8-pytest-style]
+fixture-parentheses = false
+
+[tool.ruff.lint.pyupgrade]
+keep-runtime-typing = true
+
+[tool.ruff.lint.mccabe]
+max-complexity = 25
