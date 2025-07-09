@@ -7,6 +7,11 @@
 
 This integration provides a sensor for your screen time sourced from thescreentimenetwork.com.
 
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/3f8bf4a8-eed3-4dfc-aaab-39ac1cd9b753" />
+<img width="450" alt="image" src="https://github.com/user-attachments/assets/d8988403-e233-4470-99b7-2be7724f7b05" />
+
+
+
 ## Installation
 
 ### HACS (Recommended)
