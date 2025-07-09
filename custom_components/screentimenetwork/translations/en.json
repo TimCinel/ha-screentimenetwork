@@ -2,10 +2,14 @@
     "config": {
         "step": {
             "user": {
-                "description": "If you need help with the configuration have a look here: https://github.com/TimCinel/ha-screentimenetwork",
+                "description": "To get started, you need a Screentime Network account and the ClearSpace iOS app. See [setup instructions](https://github.com/TimCinel/ha-screentimenetwork#prerequisites).",
                 "data": {
                     "username": "Username (handle)",
                     "api_token": "API Key"
+                },
+                "data_description": {
+                    "username": "Your handle from thescreentimenetwork.com",
+                    "api_token": "API key from your account settings"
                 }
             }
         },
