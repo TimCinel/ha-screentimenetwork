@@ -73,6 +73,9 @@ class STNFlowHandler(config_entries.ConfigFlow, domain=DOMAIN):
                     ),
                 },
             ),
+            description_placeholders={
+                "setup_instructions": "[setup instructions](https://github.com/TimCinel/ha-screentimenetwork#prerequisites)"
+            },
             errors=_errors,
         )
 
