@@ -3,4 +3,4 @@ pytest-asyncio
 aiohttp
 pytest-homeassistant-custom-component
 homeassistant
-bleak==3.0.0
+bleak==3.0.1
