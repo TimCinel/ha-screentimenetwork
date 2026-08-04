@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Tim Cinel
+
 """DataUpdateCoordinator for The Screentime Network."""
 
 from __future__ import annotations

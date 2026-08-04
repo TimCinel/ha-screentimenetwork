@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Tim Cinel
+
 """Test The Screentime Network config flow."""
 
 from unittest.mock import AsyncMock, patch

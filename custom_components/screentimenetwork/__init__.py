@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Tim Cinel
+
 """
 Custom integration to integrate The Screentime Network with Home Assistant.
 

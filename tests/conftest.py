@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Tim Cinel
+
 """Fixtures for The Screentime Network integration tests."""
 
 from unittest.mock import patch

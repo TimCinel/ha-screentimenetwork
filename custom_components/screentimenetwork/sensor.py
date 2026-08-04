@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Tim Cinel
+
 """Sensor platform for The Screentime Network."""
 
 from __future__ import annotations

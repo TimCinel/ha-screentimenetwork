@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Tim Cinel
+
 """Test The Screentime Network sensor."""
 
 from unittest.mock import MagicMock

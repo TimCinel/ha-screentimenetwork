@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Tim Cinel
+
 """STNEntity class."""
 
 from __future__ import annotations

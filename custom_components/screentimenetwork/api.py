@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Tim Cinel
+
 """The Screentime Network API Client."""
 
 from __future__ import annotations

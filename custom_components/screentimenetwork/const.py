@@ -1,3 +1,5 @@
+# Copyright (c) 2026 Tim Cinel
+
 """Constants for The Screentime Network."""
 
 from logging import Logger, getLogger
